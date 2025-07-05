@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Formatter - Twórz Stylowe Wiadomości</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Mark<span>Down</span></div>
+            <div class="logo"> ・ <span>pfuni</span></div>
+            <nav class="nav">
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Twórz Idealne Wiadomości Discorda z Łatwością.</h1>
+                <p>Sformatuj swój tekst, podglądaj na żywo i skopiuj bezpośrednio na Discorda. Bezpiecznie, szybko i stylowo.</p>
+                <div class="hero-buttons">
+                    <a href="#formatter-section" class="btn btn-secondary">Rozpocznij</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div id="dynamicFormattedWord" class="dynamic-word-display"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formatter-section" id="formatter-section">
+        <div class="container">
+            <h2>Edytor Wiadomości Discord</h2>
+            <div class="editor-preview-wrapper">
+                <div class="editor-container">
+                    <div class="editor-controls">
+                        <button id="boldBtn" title="Pogrubienie (Ctrl+B)"><i class="fas fa-bold"></i></button>
+                        <button id="italicBtn" title="Kursywa (Ctrl+I)"><i class="fas fa-italic"></i></button>
+                        <button id="underlineBtn" title="Podkreślenie (Ctrl+U)"><i class="fas fa-underline"></i></button>
+                        <button id="strikethroughBtn" title="Przekreślenie"><i class="fas fa-strikethrough"></i></button>
+                        <button id="inlineCodeBtn" title="Kod Inline"><i class="fas fa-code"></i></button>
+                        <button id="codeBlockBtn" title="Blok Kodu"><i class="fas fa-file-code"></i></button>
+                        <button id="blockquoteBtn" title="Cytat"><i class="fas fa-quote-right"></i></button>
+                        <button id="spoilerBtn" title="Spoiler"><i class="fas fa-eye-slash"></i></button>
+                        <button id="linkBtn" title="Link"><i class="fas fa-link"></i></button>
+                        <button id="bulletListBtn" title="Lista Punktowana"><i class="fas fa-list-ul"></i></button>
+                        <button id="numberedListBtn" title="Lista Numerowana"><i class="fas fa-list-ol"></i></button>
+                    </div>
+                    <textarea id="messageInput" placeholder="Wpisz swoją wiadomość tutaj..."></textarea>
+                    <div class="editor-info">
+                        <span id="charCount">0 znaków</span>
+                    </div>
+                </div>
+
+                <div class="preview-container">
+                    <h3>Podgląd Discorda</h3>
+                    <div class="discord-preview">
+                        <div class="discord-message">
+                            <div class="avatar"></div>
+                            <div class="message-content">
+                                <span class="username">Ty <span class="time">Dzisiaj o 12:00</span></span>
+                                <div id="livePreview" class="message-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="copyBtn" class="btn btn-primary copy-button-bottom">Kopiuj do Schowka <i class="fas fa-copy"></i></button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
